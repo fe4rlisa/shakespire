@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwqre3khb4wlf"]
+
+[ext_resource type="Script" path="res://scripts/global.gd" id="1_0vudx"]
+
+[node name="Global" type="Node"]
+script = ExtResource("1_0vudx")
+
+[connection signal="tree_exiting" from="." to="." method="_on_tree_exiting"]

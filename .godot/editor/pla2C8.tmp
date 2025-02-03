@@ -1,0 +1,5 @@
+[folding]
+
+node_unfolds=[NodePath("."), PackedStringArray("Visibility"), NodePath("CharacterBody3D/MeshInstance3D"), PackedStringArray("Transform"), NodePath("CharacterBody3D/CollisionShape3D"), PackedStringArray("Transform")]
+resource_unfolds=["res://Player/player.tscn::CapsuleMesh_l1068", PackedStringArray("Resource"), "res://Player/player.tscn::CapsuleShape3D_og6eh", PackedStringArray("Resource")]
+nodes_folded=[]

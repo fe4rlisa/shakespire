@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bjoxfgj2e1ncs"]
+
+[ext_resource type="ArrayMesh" uid="uid://sl1ux2r5y3wg" path="res://Assets/Models/Hextiles.obj" id="1_kw7ui"]
+
+[node name="Hextiles" type="MeshInstance3D"]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0, 0)
+mesh = ExtResource("1_kw7ui")

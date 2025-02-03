@@ -1,0 +1,144 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/DoorTile.tscn" id="1_aoymd"]
+[ext_resource type="Script" path="res://scripts/tile.gd" id="2_pdieo"]
+[ext_resource type="PackedScene" path="res://Scenes/Tile.tscn" id="3_8q7xw"]
+
+[node name="Room6" type="Node3D"]
+
+[node name="Door_0_0" type="Node3D" parent="." instance=ExtResource("1_aoymd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.719994, 0, 0)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_1_0" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15998, 0, 0)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_2_0" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59997, 0, 0)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_3_0" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03996, 0, 0)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_4_0" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.47995, 0, 0)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Door_7_0" type="Node3D" parent="." instance=ExtResource("1_aoymd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7999, 0, 0)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_1_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43999, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_2_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87998, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_3_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31997, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_4_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75995, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_5_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19994, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_6_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63993, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_7_1" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0799, 0, 1.24707)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_4_2" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.47995, 0, 2.49413)
+script = ExtResource("2_pdieo")
+value = 0
+metadata/center = true
+metadata/lw = Vector2(9, 5)
+
+[node name="Floor_5_2" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.91994, 0, 2.49413)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_6_2" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.35993, 0, 2.49413)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_3_3" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31997, 0, 3.7412)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_4_3" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.75995, 0, 3.7412)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_5_3" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.19994, 0, 3.7412)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_6_3" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.63993, 0, 3.7412)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_7_3" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0799, 0, 3.7412)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_8_3" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.5199, 0, 3.7412)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Door_2_4" type="Node3D" parent="." instance=ExtResource("1_aoymd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59997, 0, 4.98827)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_3_4" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03996, 0, 4.98827)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_4_4" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.47995, 0, 4.98827)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Floor_7_4" type="Node3D" parent="." instance=ExtResource("3_8q7xw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7999, 0, 4.98827)
+script = ExtResource("2_pdieo")
+value = 0
+
+[node name="Door_8_4" type="Node3D" parent="." instance=ExtResource("1_aoymd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.2399, 0, 4.98827)
+script = ExtResource("2_pdieo")
+value = 0

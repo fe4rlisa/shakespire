@@ -1,0 +1,14 @@
+Camera3D
+MeshInstance3D
+Node
+OmniLight3D
+Sprite2D
+SpotLight3D
+TextureRect
+SubViewport
+DirectionalLight3D
+PointLight2D
+MeshInstance2D
+ColorRect
+SubViewportContainer
+CharacterBody3D

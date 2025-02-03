@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://0lx5fu02c0ra"]
+
+[ext_resource type="Script" path="res://Testing/TileMNGER.gd" id="1_rxgyg"]
+
+[node name="Board" type="Node3D"]
+script = ExtResource("1_rxgyg")

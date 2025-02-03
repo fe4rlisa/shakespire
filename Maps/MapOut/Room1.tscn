@@ -1,0 +1,69 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" path="res://Scenes/Tile.tscn" id="1_l11po"]
+[ext_resource type="Script" path="res://scripts/tile.gd" id="2_f1gil"]
+[ext_resource type="PackedScene" path="res://Scenes/DoorTile.tscn" id="3_q81mp"]
+
+[node name="Room1" type="Node3D"]
+
+[node name="Floor_1_0" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15998, 0, 0)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_2_0" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59997, 0, 0)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Door_3_0" type="Node3D" parent="." instance=ExtResource("3_q81mp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.03996, 0, 0)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_1_1" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43999, 0, 1.24707)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_2_1" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87998, 0, 1.24707)
+script = ExtResource("2_f1gil")
+value = 0
+metadata/center = true
+metadata/lw = Vector2(4, 4)
+
+[node name="Floor_3_1" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.31997, 0, 1.24707)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_0_2" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.719994, 0, 2.49413)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_1_2" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.15998, 0, 2.49413)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_2_2" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.59997, 0, 2.49413)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Door_0_3" type="Node3D" parent="." instance=ExtResource("3_q81mp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3.7412)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_1_3" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.43999, 0, 3.7412)
+script = ExtResource("2_f1gil")
+value = 0
+
+[node name="Floor_2_3" type="Node3D" parent="." instance=ExtResource("1_l11po")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87998, 0, 3.7412)
+script = ExtResource("2_f1gil")
+value = 0

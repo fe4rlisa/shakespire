@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfydidtkkg0ck"]
+
+[ext_resource type="Shader" path="res://scripts/Color-Limit.gdshader" id="1_svxqi"]
+[ext_resource type="Texture2D" uid="uid://dja4xiccvu6gv" path="res://Assets/16c-cretaceous-16-1x.png" id="2_dbkfq"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_rpr6d"]
+shader = ExtResource("1_svxqi")
+shader_parameter/num_colors = 17
+shader_parameter/PALLETTE_TEXTURE = ExtResource("2_dbkfq")
+
+[sub_resource type="QuadMesh" id="QuadMesh_vhbul"]
+size = Vector2(1280, 720)
+center_offset = Vector3(640, 360, 0)
+
+[node name="Shader" type="Node"]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+material = SubResource("ShaderMaterial_rpr6d")
+mesh = SubResource("QuadMesh_vhbul")

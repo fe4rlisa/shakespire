@@ -1,0 +1,33 @@
+[gd_scene load_steps=5 format=3 uid="uid://bfo7wpliben88"]
+
+[ext_resource type="PackedScene" uid="uid://0lx5fu02c0ra" path="res://Testing/board.tscn" id="1_woceq"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_dlo8l"]
+sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
+
+[sub_resource type="Sky" id="Sky_oevvu"]
+sky_material = SubResource("ProceduralSkyMaterial_dlo8l")
+
+[sub_resource type="Environment" id="Environment_fidul"]
+background_mode = 1
+background_color = Color(0.0693007, 0.207728, 0.274054, 1)
+sky = SubResource("Sky_oevvu")
+tonemap_mode = 2
+glow_enabled = true
+
+[node name="TestScene" type="Node3D"]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.808459, -0.579032, 0.105422, 0.467105, -0.522284, 0.713465, -0.35806, 0.626049, 0.692718, 0, 0, 0)
+shadow_enabled = true
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fidul")
+
+[node name="Board" parent="." instance=ExtResource("1_woceq")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.707107, 0.707107, 0, -0.707107, 0.707107, 6.49566, 4.73313, 12.2486)
+fov = 70.0
+size = 7.0

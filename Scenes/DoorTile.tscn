@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://srl34wnexdnx"]
+
+[ext_resource type="Script" path="res://scripts/tile.gd" id="1_bwtga"]
+[ext_resource type="ArrayMesh" uid="uid://sl1ux2r5y3wg" path="res://Assets/Models/Hextiles.obj" id="2_8nibk"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_el8rh"]
+albedo_color = Color(0.580864, 0.304819, 0.131789, 1)
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_whtk5"]
+data = PackedVector3Array(0.8, 0, 0, 0.4, 0, -0.6928, 0.4, 0, 0.6928, 0.4, 0, 0.6928, 0.4, 0, -0.6928, -0.4, 0, 0.6928, -0.4, 0, 0.6928, 0.4, 0, -0.6928, -0.8, 0, 0, -0.8, 0, 0, 0.4, 0, -0.6928, -0.4, 0, -0.6928, -0.4, 0.1307, -0.6928, 0.4, 0.1307, -0.6928, -0.8, 0.1307, 0, -0.8, 0.1307, 0, 0.4, 0.1307, -0.6928, -0.4, 0.1307, 0.6928, -0.4, 0.1307, 0.6928, 0.4, 0.1307, -0.6928, 0.4, 0.1307, 0.6928, 0.4, 0.1307, 0.6928, 0.4, 0.1307, -0.6928, 0.8, 0.1307, 0, 0.8, 0, 0, 0.4, 0, 0.6928, 0.8, 0.1307, 0, 0.8, 0.1307, 0, 0.4, 0, 0.6928, 0.4, 0.1307, 0.6928, -0.4, 0, 0.6928, -0.8, 0, 0, -0.4, 0.1307, 0.6928, -0.4, 0.1307, 0.6928, -0.8, 0, 0, -0.8, 0.1307, 0, -0.4, 0, -0.6928, 0.4, 0, -0.6928, -0.4, 0.1307, -0.6928, -0.4, 0.1307, -0.6928, 0.4, 0, -0.6928, 0.4, 0.1307, -0.6928, 0.4, 0, -0.6928, 0.8, 0, 0, 0.4, 0.1307, -0.6928, 0.4, 0.1307, -0.6928, 0.8, 0, 0, 0.8, 0.1307, 0, 0.4, 0, 0.6928, -0.4, 0, 0.6928, 0.4, 0.1307, 0.6928, 0.4, 0.1307, 0.6928, -0.4, 0, 0.6928, -0.4, 0.1307, 0.6928, -0.8, 0, 0, -0.4, 0, -0.6928, -0.8, 0.1307, 0, -0.8, 0.1307, 0, -0.4, 0, -0.6928, -0.4, 0.1307, -0.6928)
+
+[node name="DoorTile" type="Node3D"]
+script = ExtResource("1_bwtga")
+
+[node name="Hextiles" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1.5, 0, -0.5, 0, 0.866025, 0, 0, 0)
+mesh = ExtResource("2_8nibk")
+surface_material_override/0 = SubResource("StandardMaterial3D_el8rh")
+metadata/_edit_group_ = true
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 0, 0, 0)
+shape = SubResource("ConcavePolygonShape3D_whtk5")
+metadata/_edit_group_ = true

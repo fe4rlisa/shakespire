@@ -1,0 +1,91 @@
+[gd_scene load_steps=12 format=3 uid="uid://m08x0nilbu5u"]
+
+[ext_resource type="PackedScene" uid="uid://dfydidtkkg0ck" path="res://Scenes/Color-Limit.tscn" id="1_b3xf1"]
+[ext_resource type="PackedScene" uid="uid://danvn0u3osd6l" path="res://Maps/StartMaps/Room0.tscn" id="1_xbcbq"]
+[ext_resource type="PackedScene" path="res://Maps/Room1.tscn" id="2_d6oax"]
+[ext_resource type="PackedScene" path="res://Maps/MapOut/Room2.tscn" id="3_agqxb"]
+[ext_resource type="PackedScene" uid="uid://cx3sg0sg4sk" path="res://Maps/dontLoad/Room4.tscn" id="5_ekaki"]
+[ext_resource type="PackedScene" uid="uid://c3mbh5yaqpi6k" path="res://Player/player.tscn" id="6_nfkmw"]
+[ext_resource type="Script" path="res://Testing/showcase-spin.gd" id="9_v4mvl"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_fu2f3"]
+sky_top_color = Color(0, 0, 0, 1)
+sky_horizon_color = Color(0.5, 0.5, 0.5, 1)
+sky_energy_multiplier = 0.0
+ground_bottom_color = Color(0, 0, 0, 1)
+ground_horizon_color = Color(0.5, 0.5, 0.5, 1)
+
+[sub_resource type="Sky" id="Sky_xknvr"]
+sky_material = SubResource("ProceduralSkyMaterial_fu2f3")
+
+[sub_resource type="Environment" id="Environment_qo5ht"]
+background_mode = 2
+background_energy_multiplier = 0.0
+sky = SubResource("Sky_xknvr")
+ambient_light_energy = 0.0
+tonemap_mode = 2
+glow_enabled = true
+
+[sub_resource type="BoxMesh" id="BoxMesh_ais8l"]
+
+[node name="TestRooms" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_qo5ht")
+
+[node name="Room0" parent="." instance=ExtResource("1_xbcbq")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.604522, 0, -0.181736)
+
+[node name="Room1" parent="." instance=ExtResource("2_d6oax")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 9.13428, 0, 9.19901)
+
+[node name="Room2" parent="." instance=ExtResource("3_agqxb")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, 9.83576, -0.0388166, 0.44806)
+
+[node name="Room6" parent="." instance=ExtResource("5_ekaki")]
+transform = Transform3D(0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, 0.5, -5.97746, -1.90735e-06, 0.428689)
+
+[node name="Room7" parent="." instance=ExtResource("5_ekaki")]
+transform = Transform3D(1, 0, -2.98023e-07, 0, 1, 0, 2.98023e-07, 0, 1, 16.7099, -1.90735e-06, -2.62242)
+
+[node name="Room4" parent="." instance=ExtResource("2_d6oax")]
+transform = Transform3D(-0.5, 0, 0.866025, 0, 1, 0, -0.866025, 0, -0.5, -5.96179, 0, 11.7128)
+
+[node name="Player" parent="." instance=ExtResource("6_nfkmw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.046, 1.2, 8.487)
+
+[node name="Player2" parent="." instance=ExtResource("6_nfkmw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2619, 1.2, 3.53128)
+
+[node name="Shader" parent="." instance=ExtResource("1_b3xf1")]
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.00104, 2.35532, 6.84754)
+light_energy = 1.835
+omni_range = 9.06787
+
+[node name="OmniLight3D3" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.36572, 1.58534, 1.25101)
+light_color = Color(0.924149, 0.0953974, 0.498516, 1)
+light_energy = 10.612
+omni_range = 6.84692
+
+[node name="OmniLight3D4" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.83628, 1.21737, 5.73433)
+light_color = Color(0.354792, 1, 0.171171, 1)
+light_energy = 12.143
+omni_range = 6.99467
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.9226, 1.08188, 2.40208)
+light_color = Color(0.821274, 0.761535, 0, 1)
+light_energy = 8.374
+omni_range = 7.03706
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.75, -0.5, -0.433013, 0.433013, 0.866025, -0.25, 0.5, 0, 0.866025, -0.117417, 1, 3)
+mesh = SubResource("BoxMesh_ais8l")
+script = ExtResource("9_v4mvl")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(0.746836, 0.332504, -0.575915, 4.31788e-08, 0.866025, 0.5, 0.665009, -0.373418, 0.646779, -1.77057, 5.32343, 10.7413)

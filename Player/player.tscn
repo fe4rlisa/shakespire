@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://c3mbh5yaqpi6k"]
+
+[ext_resource type="Script" path="res://Player/player.gd" id="1_bs6ye"]
+[ext_resource type="Shader" path="res://scripts/outline.gdshader" id="2_jpoji"]
+[ext_resource type="Shader" path="res://scripts/cel-shader-base.gdshader" id="3_ao5xt"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_h6n25"]
+render_priority = 0
+shader = ExtResource("2_jpoji")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_7tdkc"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_h6n25")
+shader = ExtResource("3_ao5xt")
+shader_parameter/color = Color(0.71, 0.273823, 0.0213, 1)
+shader_parameter/specular = Color(0, 0, 0, 0.5)
+shader_parameter/fresnel = Color(0.435192, 0.435192, 0.435192, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_l1068"]
+material = SubResource("ShaderMaterial_7tdkc")
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_og6eh"]
+
+[node name="Player" type="Node3D"]
+script = ExtResource("1_bs6ye")
+
+[node name="CharacterBody3D" type="CharacterBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, 0)
+mesh = SubResource("CapsuleMesh_l1068")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.19209e-07, 0)
+shape = SubResource("CapsuleShape3D_og6eh")

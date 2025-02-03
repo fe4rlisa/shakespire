@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://r4um3xwq08dt"]
+
+[ext_resource type="Shader" path="res://scripts/outline.gdshader" id="1_rpyxb"]
+[ext_resource type="Shader" path="res://scripts/cel-shader-base.gdshader" id="2_vgjvl"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jpeb6"]
+render_priority = 0
+shader = ExtResource("1_rpyxb")
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_gstxg"]
+render_priority = 0
+next_pass = SubResource("ShaderMaterial_jpeb6")
+shader = ExtResource("2_vgjvl")
+shader_parameter/color = Color(0.312175, 0.537994, 0.586063, 1)
+shader_parameter/specular = Color(0, 0, 0, 0.439216)
+shader_parameter/fresnel = Color(0.262932, 0.262932, 0.262932, 0.3)
+shader_parameter/uv_scale = Vector2(1, 1)
+shader_parameter/uv_offset = Vector2(0, 0)
+
+[sub_resource type="SphereMesh" id="SphereMesh_7800h"]
+material = SubResource("ShaderMaterial_gstxg")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_7800h")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, 1, 1, 0)
+light_energy = 6.07
+
+[node name="OmniLight3D2" type="OmniLight3D" parent="."]
+transform = Transform3D(-0.965926, 0, 0.258819, 0, 1, 0, -0.258819, 0, -0.965926, -1.72515, -0.010349, 1.28956)
+light_energy = 6.07
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.18468)
