@@ -18,6 +18,10 @@ Shakespire is a 6 player turn-based board game based off of Hamlet. Players atte
 As of right now there aren't many features implemented yet and no demo gameplay. 
 
 
-![Alt text](img/SHAKESPIRE PORT (DEBUG) 12_3_2024 10_46_48 PM.png)
+![Alt text](https://github.com/fe4rlisa/shakespire/blob/main/img/SHAKESPIRE%20PORT%20(DEBUG)%2012_3_2024%2010_46_48%20PM.png?raw=true)
 
-![Alt text](img/SHAKESPIRE PORT (DEBUG) 12_3_2024 11_19_35 PM.png)
+![Alt text](https://github.com/fe4rlisa/shakespire/blob/main/img/SHAKESPIRE%20PORT%20(DEBUG)%2012_3_2024%2011_26_21%20PM.png?raw=true)
+
+![Alt text](https://github.com/fe4rlisa/shakespire/blob/main/img/SHAKESPIRE%20PORT%20(DEBUG)%2012_3_2024%2011_19_35%20PM.png?raw=true)
+
+![Alt text](https://github.com/fe4rlisa/shakespire/blob/main/img/SHAKESPIRE%20PORT%20(DEBUG)%2012_3_2024%2011_23_05%20PM.png?raw=true)
